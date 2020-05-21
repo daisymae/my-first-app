@@ -19,6 +19,7 @@ describe('AppComponent', () => {
   it(`should have as title 'my-first-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
+    console.log('app title: ' + app.title);
     expect(app.title).toEqual('my-first-app');
   });
 
@@ -26,6 +27,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
+    console.log('text: ' + compiled.querySelector('.content span').textContent);
     expect(compiled.querySelector('.content span').textContent).toContain('my-first-app app is running!');
   });
 });
