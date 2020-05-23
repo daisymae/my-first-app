@@ -1,2 +1,9 @@
+<!-- will bind dynamically to disabled property -->
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<!-- <p>{{ allowNewServer }}</p> -->
+<!-- equivalent but using propertyBinding -->
+<!-- do NOT add {{}} when using property binding
+     string interpolation only works in normal template  -->
+<p [innerText]="allowNewServer"></p>
 <app-server></app-server>
 <app-server></app-server>
