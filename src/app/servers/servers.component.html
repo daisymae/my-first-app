@@ -1,6 +1,9 @@
 <label>Server Name</label>
-<input type="text" class="form-control" (input)="onUpdateServer($event)" />
-<p>{{ serverName }}</p>
+<!-- event binding -->
+<!-- <input type="text" class="form-control" (input)="onUpdateServer($event)" /> -->
+<!-- the following is 2-way databinding -->
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<!-- <p>{{ serverName }}</p> -->
 <!-- will bind dynamically to disabled property -->
 <button
   class="btn btn-primary"
