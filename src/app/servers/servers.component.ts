@@ -12,6 +12,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowNewServer = false;
+  serverCreationStatus = 'No server was created';
+  serverName = '';
 
   constructor() {
     setTimeout(() => {
@@ -20,4 +22,14 @@ export class ServersComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created!';
+  }
+
+  onUpdateServer(event: Event) {
+    console.log(event);
+    // this syntax used to be (<HTMLInputElement>event.target).value; 'as' syntax is cleaner
+    this.serverName = (event.target as HTMLInputElement).value;
+  }
 }
